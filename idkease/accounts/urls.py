@@ -24,10 +24,10 @@ urlpatterns = [
     path('memberstatusreject/<int:pk>/',MemberStatusCompReject.as_view(),name='memstatusreject'),  #  member status complaint reject
     path('authoritystatusreject/<int:pk>/',AuthorityStatusCompReject.as_view(),name='memstatusreject'),  #  Authority status complaint reject
 
-    path('memberstatusRecommendation/<int:pk>/',MemberStatusRecom.as_view(),name='memstatusrecom'),  #  member status complaint accept
-    path('authoritystatusRecommendation/<int:pk>/',AuthorityStatusRecom.as_view(),name='memstatusrecom'),  #  Authority status complaint accept
-    path('memberstatusrejectRecommendation/<int:pk>/',MemberStatusRecomReject.as_view(),name='memstatusrejectrecom'),  #  member status complaint reject
-    path('authoritystatusrejectRecommendation/<int:pk>/',AuthorityStatusRecomReject.as_view(),name='memstatusrejectrecom'),  #  Authority status complaint reject
+    path('memberstatusRecommendation/<int:pk>/',MemberStatusRecom.as_view(),name='memstatusrecom'),  #  member status recommendation accept
+    path('authoritystatusRecommendation/<int:pk>/',AuthorityStatusRecom.as_view(),name='memstatusrecom'),  #  Authority status recommendation accept
+    path('memberstatusrejectRecommendation/<int:pk>/',MemberStatusRecomReject.as_view(),name='memstatusrejectrecom'),  #  member status recommendation reject
+    path('authoritystatusrejectRecommendation/<int:pk>/',AuthorityStatusRecomReject.as_view(),name='memstatusrejectrecom'),  #  Authority status recommendation reject
 
     path('informations/',InformationView.as_view(),name='inform'),  # informations submit and all informations view
     

@@ -54,6 +54,13 @@ class Recommendation(models.Model):
     localbody=models.CharField(max_length=200)
     ward_number=models.IntegerField()
     recommendation=models.TextField()
+    choice=(
+        ('Accept','Accept'),
+        ('Reject','Reject'),
+        ('Not Available','Not Available')
+    )
+    member=models.CharField(max_length=100,choices=choice,null=True,default="Not Available")
+    authority=models.CharField(max_length=100,choices=choice,null=True,default="Not Available")
     status=models.BooleanField(default=False)
 
 class Tracking(models.Model):
