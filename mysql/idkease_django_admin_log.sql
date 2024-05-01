@@ -37,7 +37,7 @@ CREATE TABLE `django_admin_log` (
   CONSTRAINT `django_admin_log_content_type_id_c4bce8eb_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`),
   CONSTRAINT `django_admin_log_user_id_c564eba6_fk_accounts_custuser_id` FOREIGN KEY (`user_id`) REFERENCES `accounts_custuser` (`id`),
   CONSTRAINT `django_admin_log_chk_1` CHECK ((`action_flag` >= 0))
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,6 +46,7 @@ CREATE TABLE `django_admin_log` (
 
 LOCK TABLES `django_admin_log` WRITE;
 /*!40000 ALTER TABLE `django_admin_log` DISABLE KEYS */;
+INSERT INTO `django_admin_log` VALUES (1,'2024-05-01 13:32:54.361321','1','Complaint object (1)',1,'[{\"added\": {}}]',8,1),(2,'2024-05-01 13:33:28.818202','1','Tracking object (1)',1,'[{\"added\": {}}]',12,1),(3,'2024-05-01 13:47:19.931204','2','Complaint object (2)',1,'[{\"added\": {}}]',8,1),(4,'2024-05-01 13:56:47.399321','3','Tracking object (3)',1,'[{\"added\": {}}]',12,1),(5,'2024-05-01 13:57:10.220889','4','Tracking object (4)',1,'[{\"added\": {}}]',12,1);
 /*!40000 ALTER TABLE `django_admin_log` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -58,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-03 22:22:54
+-- Dump completed on 2024-05-01 20:33:18

@@ -37,7 +37,7 @@ CREATE TABLE `accounts_custuser` (
   `role` varchar(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -46,6 +46,7 @@ CREATE TABLE `accounts_custuser` (
 
 LOCK TABLES `accounts_custuser` WRITE;
 /*!40000 ALTER TABLE `accounts_custuser` DISABLE KEYS */;
+INSERT INTO `accounts_custuser` VALUES (1,'pbkdf2_sha256$720000$CGadSWySl1dbUYD5pbfpjC$RKFVo7BUOqaY/MdGeP+2Y0EP1InjrNIHR3jRgYRVVcc=','2024-05-01 13:30:13.281706',1,'admin','','','',1,1,'2024-05-01 13:29:47.107940','Users'),(2,'admin',NULL,0,'admin1','Arun','','arun@gmail.com',0,0,'2024-05-01 14:46:37.169448','WardMember'),(3,'admin',NULL,0,'Authority','','','',0,1,'2024-05-01 14:54:01.219457','Authority');
 /*!40000 ALTER TABLE `accounts_custuser` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -58,4 +59,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-03 22:22:54
+-- Dump completed on 2024-05-01 20:33:18

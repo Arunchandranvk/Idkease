@@ -29,8 +29,13 @@ CREATE TABLE `accounts_complaint` (
   `subject` varchar(200) NOT NULL,
   `description` longtext NOT NULL,
   `is_solved` tinyint(1) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `authority` varchar(100) DEFAULT NULL,
+  `member` varchar(100) DEFAULT NULL,
+  `user_id` bigint DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `accounts_complaint_user_id_01b4be71_fk_accounts_custuser_id` (`user_id`),
+  CONSTRAINT `accounts_complaint_user_id_01b4be71_fk_accounts_custuser_id` FOREIGN KEY (`user_id`) REFERENCES `accounts_custuser` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,6 +44,7 @@ CREATE TABLE `accounts_complaint` (
 
 LOCK TABLES `accounts_complaint` WRITE;
 /*!40000 ALTER TABLE `accounts_complaint` DISABLE KEYS */;
+INSERT INTO `accounts_complaint` VALUES (1,'Chorod','5','KSEB','Light is not working',0,'Accept','Reject',NULL),(2,'Vadakara','10','Water Authority','Water very bad',0,'Reject','Reject',NULL),(3,'kochi','5','KSEB','Powercut',0,'Not Available','Accept',NULL),(4,'kochi','5','KSEB','Powercut',0,'Not Available','Accept',NULL);
 /*!40000 ALTER TABLE `accounts_complaint` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -51,4 +57,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-04-03 22:22:54
+-- Dump completed on 2024-05-01 20:33:17
